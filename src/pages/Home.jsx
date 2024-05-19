@@ -25,7 +25,7 @@ const Home = ({ setShowSidebar, setShowNavbar, isLoggedIn, setIsLoggedIn }) => {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:3001/api/login', {
+      const response = await axios.post('http://75.119.133.127:3001/api/login', {
         username: username,
         password: password,
       });

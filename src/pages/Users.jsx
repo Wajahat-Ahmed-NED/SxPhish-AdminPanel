@@ -18,7 +18,7 @@ const Users = () => {
 
   const fetchUsersList = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/users'); // Fetch data from backend API
+      const response = await fetch('http://75.119.133.127:3001/api/users'); // Fetch data from backend API
       if (response.ok) {
         const result = await response.json();
         setUsersData(result);
@@ -47,8 +47,8 @@ const Users = () => {
           [columnName]: checked ? 1 : 0
         };
         console.log('requestBody:', requestBody);
-  
-        const response = await fetch(`http://localhost:3001/api/users/${userToUpdate.id}`, {
+      
+        const response = await fetch(`http://75.119.133.127:3001/api/users/${userToUpdate.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ const Users = () => {
 const handleGenerateKey=async (username)=>{
   try{
 
-    let response=await fetch(`http://localhost:3001/api/generateKey/${username}`,{
+    let response=await fetch(`http://75.119.133.127:3001/api/generateKey/${username}`,{
       method:"GET",
       headers:{
         'Content-Type': 'application/json'
